@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { SignIn } from "./modules/pages/SignIn";
 import { SignUp } from "./modules/pages/SignUp";
+import { Routes } from "react-router";
 
 export const routes = [
   { path: "/auth/signIn", element: <SignIn /> },
@@ -10,14 +11,12 @@ export const routes = [
   { path: "/play/battle/:battleId", element: <></> },
 ];
 
-export const Router = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {routes.map((data) => (
-          <Route index {...data} />
-        ))}
-      </Routes>
-    </BrowserRouter>
-  );
-};
+export const Router = () => (
+  <BrowserRouter>
+    <Routes>
+      {routes.map((data) => (
+        <Route key={data.path} index {...data} />
+      ))}
+    </Routes>
+  </BrowserRouter>
+);
