@@ -5,9 +5,9 @@ import { SignUp } from "./modules/pages/SignUp";
 export const routes = [
   { path: "/auth/signIn", element: <SignIn /> },
   { path: "/auth/signUp", element: <SignUp /> },
-  { path: "/play/battles", element: "" },
-  { path: "/play/garage", element: "" },
-  { path: "/play/battle/:battleId", element: "" },
+  { path: "/play/battles", element: <></> },
+  { path: "/play/garage", element: <></> },
+  { path: "/play/battle/:battleId", element: <></> },
 ];
 
 export const Router = () => {
