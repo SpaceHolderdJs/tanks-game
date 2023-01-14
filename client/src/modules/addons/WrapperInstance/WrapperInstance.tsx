@@ -1,4 +1,5 @@
 import { ReactNode, FC } from "react";
+import { Wrapper } from "../../ui/Wrapper";
 
 interface Props {
   title: string;
@@ -6,5 +7,10 @@ interface Props {
 }
 
 export const WrapperInstance: FC<Props> = ({ title, children }) => {
-  return <div>WrapperInstance</div>;
+  return (
+    <Wrapper>
+      <h1 className="title">{title}</h1>
+      {children}
+    </Wrapper>
+  );
 };
